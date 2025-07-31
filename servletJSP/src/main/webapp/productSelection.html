@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Selection</title>
+</head>
+<body>
+  <h1>Select a Product</h1>
+  <form action="quantity" method="post">
+    <label>
+      <input type="radio" name="productName" value="Pen" required />
+      Pen - $1.50
+      <input type="hidden" name="price_Pen" value="1.50" />
+    </label><br/>
+
+    <label>
+      <input type="radio" name="productName" value="Notebook" />
+      Notebook - $3.75
+      <input type="hidden" name="price_Notebook" value="3.75" />
+    </label><br/>
+
+    <label>
+      <input type="radio" name="productName" value="Eraser" />
+      Eraser - $0.80
+      <input type="hidden" name="price_Eraser" value="0.80" />
+    </label><br/>
+    
+    <button type="submit">Next</button>
+  </form>
+  
+  <script>
+    // Because hidden inputs inside each label will be submitted for all options
+    // We will get price in Servlet by matching product name as parameter name suffix
+  </script>
+</body>
+</html>
