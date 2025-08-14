@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Furniture Store Catalog</title>
+  <style>
+    body {
+      background: #f4f6fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #23406a;
+      color: #fff;
+      text-align: center;
+      padding: 38px 0 18px 0;
+    }
+    header h1 {
+      margin-bottom: 8px;
+      font-size: 2.4em;
+      letter-spacing: 1px;
+    }
+    .tagline {
+      font-size: 1.1em;
+      color: #d2ebff;
+      margin-bottom: 0;
+    }
+    .products {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      margin: 40px auto 0 auto;
+      max-width: 980px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1.8px solid #e3e6ee;
+      border-radius: 13px;
+      box-shadow: 0 4px 18px #0001;
+      padding: 30px 28px 23px 28px;
+      width: 270px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.18s;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 28px #0002;
+    }
+    .product-img {
+      width: 100%;
+      max-width: 185px;
+      height: 96px;
+      object-fit: contain;
+      margin-bottom: 22px;
+      border-radius: 6px;
+      border: 1.2px solid #ececf1;
+      background: #f8fafd;
+    }
+    .product-title {
+      font-size: 1.18em;
+      font-weight: bold;
+      margin: 0 0 9px 0;
+      letter-spacing: 0.1px;
+    }
+    .product-desc {
+      color: #5e6470;
+      font-size: 1em;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .product-price {
+      color: #22356f;
+      font-size: 1.13em;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      margin-bottom: 18px;
+    }
+    .buy-btn {
+      background: #2157c5;
+      color: #fff;
+      border: none;
+      padding: 9px 28px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      box-shadow: 0 1.5px 4px #0001;
+      transition: background 0.2s, color 0.2s;
+    }
+    .buy-btn:hover {
+      background: #133464;
+      color: #eaefeb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Furniture Store Catalog</h1>
+    <div class="tagline">Find the best furniture for your home</div>
+  </header>
+  <main>
+    <div class="products">
+      <!-- Product 1: Sofa (inline: custom background) -->
+      <div class="product-card" style="background:#e9f5f5;">
+        <img class="product-img" src="https://plus.unsplash.com/premium_photo-1683133884709-761d2340a2a9?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern gray sofa">
+        <div class="product-title">Sofa</div>
+        <div class="product-desc">Comfortable and stylish 3-seater sofa in charcoal grey.</div>
+        <div class="product-price">$499</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <!-- Product 2: Dining Table (inline: custom product title color) -->
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1505409628601-edc9af17fda6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wooden dining table">
+        <div class="product-title" >Dining Table</div>
+        <div class="product-desc">Spacious wooden dining table — perfect for family meals.</div>
+        <div class="product-price">$299</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <!-- Product 3: Chair (inline: custom button style) -->
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&q=80" alt="Modern white chair">
+        <div class="product-title">Chair</div>
+        <div class="product-desc">Sleek modern chair in white — fits any room or workspace.</div>
+        <div class="product-price">$149</div>
+        <button class="buy-btn" style="background:#1b1c1e;color:#fff;border:1.3px solid #333;" onmouseover="this.style.background='#447ef6';this.style.color='#fff'" onmouseout="this.style.background='#1b1c1e';this.style.color='#fff'">
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

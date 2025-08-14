@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Grocery Order</title>
+</head>
+<body style="font-family: Arial, sans-serif; background:#f9f9f9;">
+
+  <h2 style="text-align:center; margin-bottom:20px;">Online Grocery Order</h2>
+
+  <form action="order.php" method="post" style="max-width:600px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 10px #0001;">
+
+    <!-- Customer Details -->
+    <fieldset style="margin-bottom:20px; padding:15px;">
+      <legend style="font-weight:bold;">Customer Details</legend>
+
+      <div style="margin-bottom:12px;">
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autofocus style="width:100%; padding:6px;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required style="width:100%; padding:6px;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required style="width:100%; padding:6px;">
+      </div>
+
+      <div>
+        <label for="address">Delivery Address:</label><br>
+        <textarea id="address" name="address" rows="3" required style="width:100%; padding:6px;"></textarea>
+      </div>
+    </fieldset>
+
+    <!-- Order Details -->
+    <fieldset style="margin-bottom:20px; padding:15px;">
+      <legend style="font-weight:bold;">Order Details</legend>
+
+      <div style="margin-bottom:12px;">
+        <span>Grocery Items:</span><br>
+        <input type="checkbox" name="items" value="Rice"> Rice
+        <input type="checkbox" name="items" value="Milk"> Milk
+        <input type="checkbox" name="items" value="Bread"> Bread
+        <input type="checkbox" name="items" value="Eggs"> Eggs
+        <input type="checkbox" name="items" value="Sugar"> Sugar
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" style="width:100px; padding:4px;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label for="date">Delivery Date:</label><br>
+        <input type="date" id="date" name="date" required style="padding:4px;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label for="time">Preferred Delivery Time:</label><br>
+        <input type="time" id="time" name="time" style="padding:4px;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <span>Payment Method:</span><br>
+        <input type="radio" id="cod" name="payment" value="Cash on Delivery" required> <label for="cod">Cash on Delivery</label>
+        <input type="radio" id="upi" name="payment" value="UPI"> <label for="upi">UPI</label>
+        <input type="radio" id="card" name="payment" value="Card"> <label for="card">Card</label>
+      </div>
+
+      <div>
+        <label for="instructions">Special Instructions:</label><br>
+        <textarea id="instructions" name="instructions" rows="2" style="width:100%; padding:6px;"></textarea>
+      </div>
+    </fieldset>
+
+    <!-- Confirmation -->
+    <div style="margin-bottom:15px;">
+      <input type="checkbox" id="confirm" name="confirm" required>
+      <label for="confirm">I confirm my order</label>
+    </div>
+
+    <!-- Form Buttons -->
+    <div style="text-align:center;">
+      <button type="submit" style="background:#28a745; color:#fff; padding:8px 16px; border:none; border-radius:4px; margin-right:8px; cursor:pointer;">Submit</button>
+      <button type="reset" style="background:#6c757d; color:#fff; padding:8px 16px; border:none; border-radius:4px; cursor:pointer;">Reset</button>
+    </div>
+
+  </form>
+
+</body>
+</html>

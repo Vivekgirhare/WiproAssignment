@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Multimedia Lab</title>
+</head>
+<body style="background:#232628; margin:0;">
+  <div style="max-width:700px; margin:38px auto 36px auto; background:#fff; border-radius:7px; padding:36px 32px 30px 32px; box-shadow:0 4px 24px #0002;">
+    <h1 style="font-size:2em; margin-bottom:4px;">HTML5 Multimedia Lab</h1>
+    <div style="color:#7d7d7d; font-size:15px; margin-bottom:32px;">
+      This page demonstrates video, audio, embed (PDF), iframe, and inline SVG. Below is a visual preview.
+    </div>
+
+    <!-- Video section -->
+    <div style="margin-bottom:16px;">
+      <b style="font-size:1.19em;">Video (sample.mp4)</b>
+      <div style="border:1.1px solid #d7d7db; border-radius:3px; width:378px; height:180px; background:#fafafd; display:flex; align-items:center; justify-content:center; margin:10px 0 0 0; position:relative;">
+        <!-- Poster image (simulate poster.jpg with play icon) -->
+        <img src="poster.jpg" alt="Video poster" width="378" height="180" style="position:absolute;width:378px;height:180px;left:0;top:0;z-index:1; object-fit:cover; opacity:0.92;">
+        <!-- Play triangle (SVG) on top of poster -->
+        <svg width="50" height="50" style="z-index:2; position:relative;">
+          <polygon points="16,8 42,25 16,42" style="fill:#ee1414;" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Audio section -->
+    <div style="margin-bottom:18px;">
+      <b style="font-size:1.13em;">Audio (sample.mp3)</b><br>
+      <input type="text" value="controls | loop" disabled style="border:1px solid #dcdcdc;background:#fafafd;width:378px;margin-top:8px;color:#a5a5a5; font-size:15px; padding:7px 8px;">
+    </div>
+
+    <!-- Embed PDF section -->
+    <div style="margin-bottom:18px;">
+      <b style="font-size:1.13em;">Embed (document.pdf)</b>
+      <div style="margin-top:9px; border:1.1px solid #e0e0e2; border-radius:3px; background:#fafafd; width:175px; height:125px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="width:40px;height:40px;background:#e0e0e0; color:#b40000; font-size:18px;line-height:40px;text-align:center;font-weight:bold;border-radius:3.5px;">
+            PDF
+          </div>
+          <div style="font-size:12px; color:#888;max-width:100px;">
+            If not visible, download document.pdf
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Iframe section -->
+    <div style="margin-bottom:12px;">
+      <b style="font-size:1.13em;">Iframe (demo.html)</b>
+      <div style="margin-top:9px;">
+        <div style="border:1.2px solid #cecfd3; background:#fafafd; border-radius:5px; width:360px;">
+          <div style="background:#f8f8fa; color:#222; font-family:monospace; font-size:13px; display:flex; align-items:center; border-radius:5px 5px 0 0; padding:3px 10px 3px 7px; border-bottom:1px solid #e7e7e7;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#d94d4f; margin-right:5px;"></span>
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#f7c134; margin-right:5px;"></span>
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#61c554; margin-right:13px;"></span>
+            demo.html
+          </div>
+          <div style="height:56px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#666;">
+            Embedded page preview...
+          </div>
+        </div>
+        <div style="font-size:12px;color:#888;margin-top:2px;">
+    
+        </div>
+      </div>
+    </div>
+
+    <!-- Inline SVG section (placeholder for next section) -->
+    <div style="font-size:1.13em;font-weight:bold; margin:32px 0 3px 0; border-bottom:1px solid #d5d7db;">Inline SVG</div>
+
+    <!-- You can continue the SVG section as shown in your lab or leave as heading -->
+  </div>
+</body>
+</html>

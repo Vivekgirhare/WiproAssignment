@@ -1,0 +1,410 @@
+/* Google Fonts fallback */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: #f8fafd;
+  margin: 0;
+  color: #23272a;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 44px 18px 0 18px;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background: #2650a2;
+  color: #fff;
+  box-shadow: 0 4px 26px #0001;
+  z-index: 40;
+}
+.header-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 18px 12px 18px;
+}
+.store-name {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+.tagline {
+  margin-top: 5px;
+  font-size: 1.05em;
+  color: #cbe6ff;
+  margin-bottom: 8px;
+}
+nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+}
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 6px 12px;
+  border-radius: 13px;
+  transition: background .18s,color .18s;
+}
+nav li a:hover, nav li a:focus, nav li a:active {
+  background: #fff;
+  color: #2650a2;
+}
+
+/* HERO BANNER */
+.hero-banner {
+  margin-top: 75px;
+  min-height: 320px;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(26,47,98,0.61);
+  width: 100%;
+  max-width: 1200px;
+  color: #fff;
+  text-align: center;
+  padding: 48px 20px 50px 20px;
+  border-radius: 8px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-overlay h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  text-shadow: 0 1px 14px #2227;
+  margin-bottom: 18px;
+  letter-spacing: 1.1px;
+}
+.shop-btn {
+  display: inline-block;
+  font-size: 1.18em;
+  background: #f2604d;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 12px #0002;
+  border: none;
+  letter-spacing: 0.1em;
+  transition: background .2s, transform .2s;
+}
+.shop-btn:hover, .shop-btn:focus, .shop-btn:active {
+  background: #dd3c2b;
+  transform: scale(1.08);
+}
+
+/* PRODUCTS GRID */
+.products-section {
+  margin-top: 32px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 18px #0001;
+  padding: 28px 18px 21px 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform .18s, box-shadow .18s;
+}
+.product-card:hover, .product-card:focus-within {
+  transform: scale(1.035);
+  box-shadow: 0 10px 28px #2650a20f;
+}
+.product-card img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 11px #2650a215;
+}
+.product-card h3 {
+  font-size: 1.17em;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+.product-card p {
+  color: #545b6e;
+  font-size: 0.97em;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.product-card .price {
+  color: #2650a2;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+}
+.product-card button {
+  background: #2058d0;
+  color: #fff;
+  padding: 9px 22px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .18s, transform .16s;
+}
+.product-card button:hover, .product-card button:focus, .product-card button:active {
+  background: #18407c;
+  transform: scale(1.05);
+}
+.sale-ribbon {
+  position: absolute;
+  left: -16px;
+  top: 14px;
+  background: #f2604d;
+  color: #fff;
+  font-size: 0.93em;
+  font-weight: 600;
+  padding: 5px 20px 5px 20px;
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0 1.5px 9px #f2604d25;
+  letter-spacing: 0.08em;
+  z-index: 2;
+}
+
+/* SPECIAL OFFER SECTION */
+.special-offer-section {
+  background: linear-gradient(90deg,#fbe8d6 60%,#f0faf7 120%);
+  border-radius: 15px;
+  padding: 38px 0 28px 0;
+  margin: 38px 0 24px 0;
+  position: relative;
+  width: 96%;
+  margin-left: 2%;
+}
+.special-offer-label {
+  position: absolute;
+  top: 22px;
+  left: 38px;
+  background: #f2604d;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08em;
+  padding: 7px 18px;
+  border-radius: 28px;
+  box-shadow: 0 1px 12px #deae5a3b;
+  letter-spacing: 0.07em;
+}
+.special-offers {
+  display: flex;
+  gap: 42px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0;
+}
+.special-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #0002;
+  padding: 30px 32px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 175px;
+}
+.special-card img {
+  width: 110px;
+  height: 85px;
+  border-radius: 11px;
+  object-fit: cover;
+  margin-bottom: 19px;
+  box-shadow: 0 2px 18px #f2604d30;
+}
+.special-card h4 {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin: 0 0 7px 0;
+}
+.special-price {
+  color: #f2604d;
+  font-size: 1.13em;
+  font-weight: 700;
+}
+
+/* CUSTOMER REVIEWS */
+.reviews-section {
+  margin: 40px 0 0 0;
+}
+.reviews-grid {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+.review-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px #0002;
+  padding: 24px 22px 16px 22px;
+  flex: 1 0 246px;
+  min-width: 246px;
+  max-width: 350px;
+  border: 1.2px solid #ebeff1;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.review-text {
+  font-style: italic;
+  font-size: 1.04em;
+  color: #39529d;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+.review-author {
+  color: #525d71;
+  font-size: 0.96em;
+  font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+  background: #222b38;
+  color: #cbdaf5;
+  padding: 28px 0 16px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+.social-icons {
+  margin-top: 9px;
+  display: flex;
+  gap: 17px;
+}
+.social-icons span {
+  font-size: 1.15em;
+  color: #f5efcd;
+  padding: 6px 13px;
+  background: #18407c;
+  border-radius: 17px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  margin-right: 7px;
+  transition: background .15s, color .15s;
+  cursor: pointer;
+}
+.social-icons span:hover, .social-icons span:focus, .social-icons span:active {
+  background: #f2604d;
+  color: #fff;
+}
+footer a {
+  color: #cbe6ff;
+  text-decoration: none;
+  transition: color .14s;
+}
+footer a:hover, footer a:focus, footer a:active {
+  color: #f2604d;
+}
+.copyright {
+  font-size: 0.98em;
+  color: #b0b9c6;
+  margin-top: 8px;
+  margin-left: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1020px) {
+  main, .header-content, .footer-content {
+    max-width: 99vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .product-grid {
+    gap: 16px;
+  }
+  .reviews-grid {
+    gap: 12px;
+  }
+  .special-offers {
+    gap: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .header-content, .footer-content {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 15px 7px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 14px;
+  }
+  main {
+    padding: 24px 6px 0 6px;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-grid {
+    flex-direction: column;
+    gap: 13px;
+  }
+  .special-offers {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .special-card {
+    min-width: 90vw;
+    margin-bottom: 8px;
+  }
+  .special-offer-label {
+    left: 20px;
+    top: 13px;
+    font-size: 0.97em;
+    padding: 4px 12px;
+  }
+}
+
+/* Focus states and accessibility */
+button, .shop-btn, nav li a, .social-icons span {
+  outline: none;
+}
+button:focus, .shop-btn:focus, nav li a:focus, .social-icons span:focus {
+  box-shadow: 0 0 0 3px #f2604dd3;
+}
