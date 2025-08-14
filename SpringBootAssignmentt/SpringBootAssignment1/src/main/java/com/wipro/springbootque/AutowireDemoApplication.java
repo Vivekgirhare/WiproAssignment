@@ -1,0 +1,13 @@
+package com.wipro.springbootque;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AutowireDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AutowireDemoApplication.class, args);
+	}
+
+}
