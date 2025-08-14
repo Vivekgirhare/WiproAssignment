@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot CSS, JS, and Images Demo</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<h1>Welcome to Spring Boot Static Resources Demo!</h1>
+
+<img th:src="@{/images/logo.png}" alt="Logo">
+
+<p>This page uses CSS for styling, JavaScript for interaction, and loads an image.</p>
+
+<button type="button" onclick="showAlert()">Click Me!</button>
+
+<script th:src="@{/js/scripts.js}"></script>
+
+</body>
+</html>

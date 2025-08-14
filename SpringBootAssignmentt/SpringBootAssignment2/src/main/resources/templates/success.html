@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Saved</title>
+</head>
+<body>
+<h2>Customer details saved successfully!</h2>
+<p th:text="'Name: ' + ${customer.name}"></p>
+<p th:text="'Email: ' + ${customer.email}"></p>
+<p th:text="'Age: ' + ${customer.age}"></p>
+<p th:text="'Gender: ' + ${customer.gender}"></p>
+<p th:text="'Birthday: ' + ${customer.birthday}"></p>
+<p th:text="'Phone: ' + ${customer.phone}"></p>
+</body>
+</html>

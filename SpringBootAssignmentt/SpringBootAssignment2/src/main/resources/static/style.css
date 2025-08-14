@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+
+table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }
+th, td { text-align: left; }
+body { font-family: Arial, sans-serif; padding: 1rem; }
+a { margin-right: 8px; }

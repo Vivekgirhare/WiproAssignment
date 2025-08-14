@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${client.id}==null?'Add':'Edit'">Client</title>
+</head>
+<body>
+    <h2 th:text="${client.id}==null?'Add Client':'Edit Client'"></h2>
+    <form action="#" th:action="@{/clients/save}" th:object="${client}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Name: <input type="text" th:field="*{name}" /></label><span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br/>
+        <label>Email: <input type="email" th:field="*{email}" /></label><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br/>
+        <label>Phone: <input type="text" th:field="*{phone}" /></label><span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span><br/>
+        <label>Address: <input type="text" th:field="*{address}" /></label><span th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></span><br/>
+        <button type="submit">Save</button>
+        <a href="/clients">Cancel</a>
+    </form>
+</body>
+</html>
