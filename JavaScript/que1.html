@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game</title>
+    <script>
+        // Function to run the quiz
+        function startQuiz() {
+            // 1. Welcome alert
+            alert("Welcome to the Quiz Game!");
+
+            // 2. Ask for the user's name
+            let name = prompt("What's your name?");
+            if (!name) {
+                alert("You didn't enter your name. Exiting game.");
+                return;
+            }
+
+            // 3. Confirm if ready
+            let ready = confirm("Hi " + name + "! Are you ready for the quiz?");
+            if (!ready) {
+                alert("Okay " + name + ", maybe next time!");
+                return;
+            }
+
+            // 4. Ask a multiple-choice question
+            let question = "What is the capital of France?\n" +
+                           "a) Berlin\n" +
+                           "b) Madrid\n" +
+                           "c) Paris\n" +
+                           "d) Rome";
+            let answer = prompt(question);
+
+            // 5. Check answer and show result
+            if (answer && answer.toLowerCase() === "c") {
+                alert("Correct! 🎉 Well done, " + name + "!");
+            } else {
+                alert("Oops! The correct answer is 'c) Paris'. Better luck next time, " + name + "!");
+            }
+        }
+    </script>
+</head>
+<body onload="startQuiz()">
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Team Player Details</title>
+</head>
+<body>
+<h1>Sports Team Player Details</h1>
+<pre id="output"></pre>
+
+<script>
+// First Player Object
+const player1 = {
+    name: "Virat Kohli",
+    age: 36,
+    sport: "Cricket",
+    stats: {
+        matches: 500,
+        runs: 25000,
+        average: 57.2
+    }
+};
+
+// 1. Object Destructuring
+const { name, sport, stats: { matches, runs, average } } = player1;
+
+// 2. Display using Template Literals
+let outputText = `Player ${name} plays ${sport}.
+Matches: ${matches} | Runs: ${runs} | Batting Average: ${average}\n\n`;
+
+// Second Player Object
+const player2 = {
+    name: "MS Dhoni",
+    age: 44,
+    sport: "Cricket",
+    stats: {
+        matches: 450,
+        runs: 17000,
+        average: 50.5
+    }
+};
+
+// 3. Array of players
+const players = [player1, player2];
+
+// Array Destructuring
+const [p1, p2] = players;
+
+// Display both players
+for (let { name, sport, stats: { matches, runs, average } } of players) {
+    outputText += `Player ${name} plays ${sport}.
+Matches: ${matches} | Runs: ${runs} | Batting Average: ${average}\n\n`;
+}
+
+document.getElementById("output").textContent = outputText;
+</script>
+</body>
+</html>

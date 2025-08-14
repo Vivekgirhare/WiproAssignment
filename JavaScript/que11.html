@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Share Market Portfolio - Closure Example</title>
+</head>
+<body style="font-family:Arial, sans-serif; background:#f9f9f9; padding:20px;">
+  <h2>JavaScript Closure – Share Market Portfolio Tracker</h2>
+  <pre id="output" style="background:#fff; padding:15px; border:1px solid #ccc;"></pre>
+
+  <script>
+    // Closure: Portfolio module
+    function createPortfolio() {
+      let portfolio = []; // private
+
+      function buyShare(company, quantity, pricePerShare) {
+        let existing = portfolio.find(s => s.company === company);
+        if (existing) {
+          existing.quantity += quantity;
+          existing.price = pricePerShare;
+        } else {
+          portfolio.push({ company, quantity, price: pricePerShare });
+        }
+        return `${quantity} shares bought of ${company} at ₹${pricePerShare}`;
+      }
+
+      function totalValue() {
+        let total = portfolio.reduce((sum, s) => sum + (s.quantity * s.price), 0);
+        let list = portfolio.map(s =>
+          `${s.company}: ${s.quantity} × ₹${s.price} = ₹${s.quantity * s.price}`
+        ).join("\n");
+        return `${list}\nTotal Portfolio Value: ₹${total}`;
+      }
+
+      return { buyShare, totalValue };
+    }
+
+    // Create a portfolio instance
+    const myPortfolio = createPortfolio();
+    let out = "";
+
+    // Ask for number of companies to buy
+    let buys = parseInt(prompt("How many companies do you want to buy shares for?"));
+    for (let i = 0; i < buys; i++) {
+      let name = prompt(`Enter company ${i+1} name:`);
+      let qty = parseInt(prompt(`Enter quantity for ${name}:`));
+      let price = parseFloat(prompt(`Enter price per share for ${name}:`));
+      out += myPortfolio.buyShare(name, qty, price) + "\n";
+    }
+
+    // Show final result
+    out += "\n" + myPortfolio.totalValue();
+    document.getElementById("output").textContent = out;
+  </script>
+</body>
+</html>

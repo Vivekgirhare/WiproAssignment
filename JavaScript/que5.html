@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store Management</title>
+</head>
+<body>
+<h2>Book Store Management (JSON with User Input)</h2>
+<pre id="output"></pre>
+
+<script>
+let output = document.getElementById("output");
+
+// Step 1: Create JSON array from user input
+let books = [];
+let totalBooks = parseInt(prompt("How many books do you want to add initially?"));
+
+for (let i = 0; i < totalBooks; i++) {
+    let title = prompt(`Enter title of book ${i + 1}:`);
+    let author = prompt(`Enter author of book ${i + 1}:`);
+    let price = parseFloat(prompt(`Enter price of book ${i + 1}:`));
+    let available = prompt(`Is book ${i + 1} available? (yes/no):`).toLowerCase() === "yes";
+    books.push({ title, author, price, available });
+}
+
+// Display all books
+function displayAllBooks() {
+    output.textContent += "📚 All Books:\n";
+    for (let book of books) {
+        output.textContent += `${book.title} by ${book.author} — ₹${book.price} — Available: ${book.available}\n`;
+    }
+    output.textContent += "\n";
+}
+
+// Display only available books
+function displayAvailableBooks() {
+    output.textContent += "✅ Available Books:\n";
+    for (let book of books) {
+        if (book.available) {
+            output.textContent += `${book.title} by ${book.author} — ₹${book.price}\n`;
+        }
+    }
+    output.textContent += "\n";
+}
+
+// Add new book
+function addBook() {
+    let title = prompt("Enter new book title:");
+    let author = prompt("Enter new book author:");
+    let price = parseFloat(prompt("Enter new book price:"));
+    let available = prompt("Is the book available? (yes/no):").toLowerCase() === "yes";
+    books.push({ title, author, price, available });
+    output.textContent += `📖 Added: ${title}\n\n`;
+}
+
+// Update book price
+function updatePrice() {
+    let title = prompt("Enter the title of the book to update price:");
+    let newPrice = parseFloat(prompt("Enter the new price:"));
+    for (let book of books) {
+        if (book.title === title) {
+            book.price = newPrice;
+            output.textContent += `💰 Updated Price of "${title}" to ₹${newPrice}\n\n`;
+            return;
+        }
+    }
+    output.textContent += `❌ Book not found: ${title}\n\n`;
+}
+
+// Delete book
+function deleteBook() {
+    let title = prompt("Enter the title of the book to delete:");
+    let index = books.findIndex(book => book.title === title);
+    if (index !== -1) {
+        books.splice(index, 1);
+        output.textContent += `🗑️ Deleted: ${title}\n\n`;
+    } else {
+        output.textContent += `❌ Book not found: ${title}\n\n`;
+    }
+}
+
+// Program execution flow
+displayAllBooks();
+displayAvailableBooks();
+addBook();
+updatePrice();
+deleteBook();
+displayAllBooks();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switchboard Control</title>
+</head>
+<body>
+<h2>Switchboard Control (let, var, const)</h2>
+<pre id="output"></pre>
+
+<script>
+// Ask for inputs immediately when page loads
+const building = prompt("Enter the Building Name:"); // const variable
+let status = "OFF"; // let variable
+let deviceList = prompt("Enter devices separated by commas (e.g. Light,Fan,AC)").split(",");
+
+let output = document.getElementById("output");
+output.textContent = `Switchboard Simulation for ${building}\n\n`;
+
+// var for loop counter
+for (var i = 0; i < deviceList.length; i++) {
+    // Toggle ON/OFF
+    status = (status === "OFF") ? "ON" : "OFF";
+    output.textContent += `Checking Switch ${i + 1}: ${deviceList[i].trim()} is ${status}\n`;
+}
+
+// var is accessible outside loop
+output.textContent += `\nLoop counter after loop: ${i}\n`;
+
+// Try reassigning const (will cause error in console, not crash page)
+try {
+    building = "New Building"; // ❌ Will throw an error
+} catch (err) {
+    output.textContent += `\nError when reassigning const: ${err.message}`;
+}
+</script>
+</body>
+</html>
+

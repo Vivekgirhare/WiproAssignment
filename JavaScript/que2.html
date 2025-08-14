@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Tax Calculator</title>
+    <script>
+        function calculateTax() {
+            // 1. Take inputs
+            let fullName = prompt("Enter your Full Name:");
+            let panNumber = prompt("Enter your PAN Number (10 characters, uppercase):");
+            let dobInput = prompt("Enter your Date of Birth (YYYY-MM-DD):");
+            let annualIncome = parseFloat(prompt("Enter your Annual Income:"));
+
+            // 2. Validate PAN format
+            if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(panNumber)) {
+                alert("Invalid PAN format! It must be 10 characters in uppercase (e.g., ABCDE1234F).");
+                return;
+            }
+
+            // 3. Calculate age using Date object
+            let dob = new Date(dobInput);
+            let today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            let monthDiff = today.getMonth() - dob.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            // 4. Calculate tax based on slabs
+            let tax = 0;
+            if (annualIncome <= 250000) {
+                tax = 0;
+            } else if (annualIncome <= 500000) {
+                tax = 0.05 * annualIncome;
+            } else if (annualIncome <= 1000000) {
+                tax = 0.20 * annualIncome;
+            } else {
+                tax = 0.30 * annualIncome;
+            }
+
+            // 5. Round tax to nearest rupee
+            tax = Math.round(tax);
+
+            // 6. Display result
+            let output = 
+                "Name: " + fullName.toUpperCase() + "\n" +
+                "PAN: " + panNumber + "\n" +
+                "Age: " + age + " years\n" +
+                "Annual Income: ₹" + annualIncome + "\n" +
+                "Calculated Tax: ₹" + tax;
+
+            alert(output);
+        }
+    </script>
+</head>
+<body onload="calculateTax()">
+</body>
+</html>
